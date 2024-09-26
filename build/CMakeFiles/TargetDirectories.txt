@@ -1,0 +1,8 @@
+/root/Desktop/我的网盘/high-performance-compute-lib/build/CMakeFiles/rebuild_cache.dir
+/root/Desktop/我的网盘/high-performance-compute-lib/build/CMakeFiles/edit_cache.dir
+/root/Desktop/我的网盘/high-performance-compute-lib/build/src/CMakeFiles/rebuild_cache.dir
+/root/Desktop/我的网盘/high-performance-compute-lib/build/src/CMakeFiles/edit_cache.dir
+/root/Desktop/我的网盘/high-performance-compute-lib/build/src/CMakeFiles/kernels.dir
+/root/Desktop/我的网盘/high-performance-compute-lib/build/tests/CMakeFiles/rebuild_cache.dir
+/root/Desktop/我的网盘/high-performance-compute-lib/build/tests/CMakeFiles/edit_cache.dir
+/root/Desktop/我的网盘/high-performance-compute-lib/build/tests/CMakeFiles/test.dir

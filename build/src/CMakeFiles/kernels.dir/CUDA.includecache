@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/simple_matmul.h
+
+/root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/simple_matmul.cu
+simple_matmul.h
+/root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/simple_matmul.h
+cuda_runtime.h
+-
+iostream
+-
+
