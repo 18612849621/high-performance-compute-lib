@@ -1,2 +1,2 @@
-/usr/bin/ar qc libkernels.a  CMakeFiles/kernels.dir/kernels/print.cu.o CMakeFiles/kernels.dir/kernels/simple_matmul.cu.o
+/usr/bin/ar qc libkernels.a  CMakeFiles/kernels.dir/kernels/print.cu.o CMakeFiles/kernels.dir/kernels/matmul.cu.o
 /usr/bin/ranlib libkernels.a

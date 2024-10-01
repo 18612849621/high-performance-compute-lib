@@ -70,29 +70,29 @@ src/CMakeFiles/kernels.dir/kernels/print.cu.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/kernels.dir/kernels/print.cu.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
-src/CMakeFiles/kernels.dir/kernels/simple_matmul.cu.o: src/CMakeFiles/kernels.dir/flags.make
-src/CMakeFiles/kernels.dir/kernels/simple_matmul.cu.o: ../src/kernels/simple_matmul.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Desktop/我的网盘/high-performance-compute-lib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CUDA object src/CMakeFiles/kernels.dir/kernels/simple_matmul.cu.o"
-	cd /root/Desktop/我的网盘/high-performance-compute-lib/build/src && /usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -c /root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/simple_matmul.cu -o CMakeFiles/kernels.dir/kernels/simple_matmul.cu.o
+src/CMakeFiles/kernels.dir/kernels/matmul.cu.o: src/CMakeFiles/kernels.dir/flags.make
+src/CMakeFiles/kernels.dir/kernels/matmul.cu.o: ../src/kernels/matmul.cu
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Desktop/我的网盘/high-performance-compute-lib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CUDA object src/CMakeFiles/kernels.dir/kernels/matmul.cu.o"
+	cd /root/Desktop/我的网盘/high-performance-compute-lib/build/src && /usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -c /root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/matmul.cu -o CMakeFiles/kernels.dir/kernels/matmul.cu.o
 
-src/CMakeFiles/kernels.dir/kernels/simple_matmul.cu.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/kernels.dir/kernels/simple_matmul.cu.i"
+src/CMakeFiles/kernels.dir/kernels/matmul.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/kernels.dir/kernels/matmul.cu.i"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
 
-src/CMakeFiles/kernels.dir/kernels/simple_matmul.cu.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/kernels.dir/kernels/simple_matmul.cu.s"
+src/CMakeFiles/kernels.dir/kernels/matmul.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/kernels.dir/kernels/matmul.cu.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
 # Object files for target kernels
 kernels_OBJECTS = \
 "CMakeFiles/kernels.dir/kernels/print.cu.o" \
-"CMakeFiles/kernels.dir/kernels/simple_matmul.cu.o"
+"CMakeFiles/kernels.dir/kernels/matmul.cu.o"
 
 # External object files for target kernels
 kernels_EXTERNAL_OBJECTS =
 
 src/libkernels.a: src/CMakeFiles/kernels.dir/kernels/print.cu.o
-src/libkernels.a: src/CMakeFiles/kernels.dir/kernels/simple_matmul.cu.o
+src/libkernels.a: src/CMakeFiles/kernels.dir/kernels/matmul.cu.o
 src/libkernels.a: src/CMakeFiles/kernels.dir/build.make
 src/libkernels.a: src/CMakeFiles/kernels.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/Desktop/我的网盘/high-performance-compute-lib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CUDA static library libkernels.a"

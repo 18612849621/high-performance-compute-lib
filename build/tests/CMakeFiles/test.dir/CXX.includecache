@@ -6,13 +6,3 @@
 
 #IncludeRegexTransform: 
 
-../include/print.h
-
-../include/simple_matmul.h
-
-/root/Desktop/我的网盘/high-performance-compute-lib/tests/kernels/test.cc
-print.h
-/root/Desktop/我的网盘/high-performance-compute-lib/tests/kernels/print.h
-simple_matmul.h
-/root/Desktop/我的网盘/high-performance-compute-lib/tests/kernels/simple_matmul.h
-

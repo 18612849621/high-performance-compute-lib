@@ -125,6 +125,33 @@ kernels/fast:
 	cd /root/Desktop/我的网盘/high-performance-compute-lib/build && $(MAKE) -f src/CMakeFiles/kernels.dir/build.make src/CMakeFiles/kernels.dir/build
 .PHONY : kernels/fast
 
+kernels/matmul.o: kernels/matmul.cu.o
+
+.PHONY : kernels/matmul.o
+
+# target to build an object file
+kernels/matmul.cu.o:
+	cd /root/Desktop/我的网盘/high-performance-compute-lib/build && $(MAKE) -f src/CMakeFiles/kernels.dir/build.make src/CMakeFiles/kernels.dir/kernels/matmul.cu.o
+.PHONY : kernels/matmul.cu.o
+
+kernels/matmul.i: kernels/matmul.cu.i
+
+.PHONY : kernels/matmul.i
+
+# target to preprocess a source file
+kernels/matmul.cu.i:
+	cd /root/Desktop/我的网盘/high-performance-compute-lib/build && $(MAKE) -f src/CMakeFiles/kernels.dir/build.make src/CMakeFiles/kernels.dir/kernels/matmul.cu.i
+.PHONY : kernels/matmul.cu.i
+
+kernels/matmul.s: kernels/matmul.cu.s
+
+.PHONY : kernels/matmul.s
+
+# target to generate assembly for a file
+kernels/matmul.cu.s:
+	cd /root/Desktop/我的网盘/high-performance-compute-lib/build && $(MAKE) -f src/CMakeFiles/kernels.dir/build.make src/CMakeFiles/kernels.dir/kernels/matmul.cu.s
+.PHONY : kernels/matmul.cu.s
+
 kernels/print.o: kernels/print.cu.o
 
 .PHONY : kernels/print.o
@@ -152,33 +179,6 @@ kernels/print.cu.s:
 	cd /root/Desktop/我的网盘/high-performance-compute-lib/build && $(MAKE) -f src/CMakeFiles/kernels.dir/build.make src/CMakeFiles/kernels.dir/kernels/print.cu.s
 .PHONY : kernels/print.cu.s
 
-kernels/simple_matmul.o: kernels/simple_matmul.cu.o
-
-.PHONY : kernels/simple_matmul.o
-
-# target to build an object file
-kernels/simple_matmul.cu.o:
-	cd /root/Desktop/我的网盘/high-performance-compute-lib/build && $(MAKE) -f src/CMakeFiles/kernels.dir/build.make src/CMakeFiles/kernels.dir/kernels/simple_matmul.cu.o
-.PHONY : kernels/simple_matmul.cu.o
-
-kernels/simple_matmul.i: kernels/simple_matmul.cu.i
-
-.PHONY : kernels/simple_matmul.i
-
-# target to preprocess a source file
-kernels/simple_matmul.cu.i:
-	cd /root/Desktop/我的网盘/high-performance-compute-lib/build && $(MAKE) -f src/CMakeFiles/kernels.dir/build.make src/CMakeFiles/kernels.dir/kernels/simple_matmul.cu.i
-.PHONY : kernels/simple_matmul.cu.i
-
-kernels/simple_matmul.s: kernels/simple_matmul.cu.s
-
-.PHONY : kernels/simple_matmul.s
-
-# target to generate assembly for a file
-kernels/simple_matmul.cu.s:
-	cd /root/Desktop/我的网盘/high-performance-compute-lib/build && $(MAKE) -f src/CMakeFiles/kernels.dir/build.make src/CMakeFiles/kernels.dir/kernels/simple_matmul.cu.s
-.PHONY : kernels/simple_matmul.cu.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -188,12 +188,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... kernels"
+	@echo "... kernels/matmul.o"
+	@echo "... kernels/matmul.i"
+	@echo "... kernels/matmul.s"
 	@echo "... kernels/print.o"
 	@echo "... kernels/print.i"
 	@echo "... kernels/print.s"
-	@echo "... kernels/simple_matmul.o"
-	@echo "... kernels/simple_matmul.i"
-	@echo "... kernels/simple_matmul.s"
 .PHONY : help
 
 

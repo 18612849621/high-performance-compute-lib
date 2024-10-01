@@ -1,6 +1,6 @@
-#ifndef TEST_PRINT_H
-#define TEST_PRINT_H
+#ifndef PRINT_H
+#define PRINT_H
 
-void Print();
+void PrintTest();
 
-#endif // TEST_PRINT_H
+#endif // PRINT_H

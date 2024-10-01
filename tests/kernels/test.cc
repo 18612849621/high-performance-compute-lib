@@ -1,9 +1,9 @@
 #include "print.h"
-#include "simple_matmul.h"
+#include "matmul.h"
 
 int main()
 {
-    Print();
-    SimpleMatmulTest();
+    // PrintTest();
+    // MatmulTest();
     return 0;
 }

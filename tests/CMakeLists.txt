@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16.3)  # 确保使用支持CUDA的版本
+cmake_minimum_required(VERSION 3.16.3) # 确保使用支持CUDA的版本
 project(tests LANGUAGES CXX CUDA)
 
 # env

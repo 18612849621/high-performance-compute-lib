@@ -60,15 +60,15 @@ include tests/CMakeFiles/test.dir/flags.make
 tests/CMakeFiles/test.dir/kernels/test.cc.o: tests/CMakeFiles/test.dir/flags.make
 tests/CMakeFiles/test.dir/kernels/test.cc.o: ../tests/kernels/test.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Desktop/我的网盘/high-performance-compute-lib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/test.dir/kernels/test.cc.o"
-	cd /root/Desktop/我的网盘/high-performance-compute-lib/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/kernels/test.cc.o -c /root/Desktop/我的网盘/high-performance-compute-lib/tests/kernels/test.cc
+	cd /root/Desktop/我的网盘/high-performance-compute-lib/build/tests && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/kernels/test.cc.o -c /root/Desktop/我的网盘/high-performance-compute-lib/tests/kernels/test.cc
 
 tests/CMakeFiles/test.dir/kernels/test.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/kernels/test.cc.i"
-	cd /root/Desktop/我的网盘/high-performance-compute-lib/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Desktop/我的网盘/high-performance-compute-lib/tests/kernels/test.cc > CMakeFiles/test.dir/kernels/test.cc.i
+	cd /root/Desktop/我的网盘/high-performance-compute-lib/build/tests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Desktop/我的网盘/high-performance-compute-lib/tests/kernels/test.cc > CMakeFiles/test.dir/kernels/test.cc.i
 
 tests/CMakeFiles/test.dir/kernels/test.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/kernels/test.cc.s"
-	cd /root/Desktop/我的网盘/high-performance-compute-lib/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Desktop/我的网盘/high-performance-compute-lib/tests/kernels/test.cc -o CMakeFiles/test.dir/kernels/test.cc.s
+	cd /root/Desktop/我的网盘/high-performance-compute-lib/build/tests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Desktop/我的网盘/high-performance-compute-lib/tests/kernels/test.cc -o CMakeFiles/test.dir/kernels/test.cc.s
 
 # Object files for target test
 test_OBJECTS = \
