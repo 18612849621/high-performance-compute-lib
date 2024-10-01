@@ -4,6 +4,7 @@
 tests/CMakeFiles/test.dir/kernels/test.cc.o
  ../include/matmul.h
  ../include/print.h
+ ../include/transpose.h
  ../src/utils/cuda_utils.h
  /root/Desktop/我的网盘/high-performance-compute-lib/tests/kernels/test.cc
  /usr/local/cuda-11.8/include/builtin_types.h

@@ -3,6 +3,7 @@
 
 tests/CMakeFiles/test.dir/kernels/test.cc.o: ../include/matmul.h
 tests/CMakeFiles/test.dir/kernels/test.cc.o: ../include/print.h
+tests/CMakeFiles/test.dir/kernels/test.cc.o: ../include/transpose.h
 tests/CMakeFiles/test.dir/kernels/test.cc.o: ../src/utils/cuda_utils.h
 tests/CMakeFiles/test.dir/kernels/test.cc.o: ../tests/kernels/test.cc
 tests/CMakeFiles/test.dir/kernels/test.cc.o: /usr/local/cuda-11.8/include/builtin_types.h

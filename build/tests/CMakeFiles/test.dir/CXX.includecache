@@ -14,6 +14,10 @@ utils/cuda_utils.h
 utils/cuda_utils.h
 ../include/utils/cuda_utils.h
 
+../include/transpose.h
+utils/cuda_utils.h
+../include/utils/cuda_utils.h
+
 ../src/utils/cuda_utils.h
 cuda_runtime.h
 -
@@ -23,6 +27,8 @@ print.h
 /root/Desktop/我的网盘/high-performance-compute-lib/tests/kernels/print.h
 matmul.h
 /root/Desktop/我的网盘/high-performance-compute-lib/tests/kernels/matmul.h
+transpose.h
+/root/Desktop/我的网盘/high-performance-compute-lib/tests/kernels/transpose.h
 
 /usr/local/cuda-11.8/include/builtin_types.h
 device_types.h

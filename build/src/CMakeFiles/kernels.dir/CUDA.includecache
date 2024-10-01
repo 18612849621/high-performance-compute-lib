@@ -6,29 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../include/matmul.h
-utils/cuda_utils.h
-../include/utils/cuda_utils.h
-
-../include/print.h
-utils/cuda_utils.h
-../include/utils/cuda_utils.h
-
-../src/utils/cuda_utils.h
-cuda_runtime.h
--
-
-/root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/matmul.cu
-matmul.h
-/root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/matmul.h
-cuda_runtime.h
--
-iostream
--
-
-/root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/print.cu
-print.h
-/root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/print.h
-iostream
--
+/root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/transpose.cu
+stdio.h
+/root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/stdio.h
 
