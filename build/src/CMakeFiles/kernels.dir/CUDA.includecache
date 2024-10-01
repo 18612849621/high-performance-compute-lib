@@ -9,4 +9,8 @@
 /root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/transpose.cu
 stdio.h
 /root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/stdio.h
+iostream
+-
+string
+-
 
