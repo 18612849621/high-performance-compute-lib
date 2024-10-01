@@ -64,6 +64,10 @@
 				{
 					"backtrace" : 3,
 					"path" : "/root/Desktop/我的网盘/high-performance-compute-lib/src"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/usr/local/cuda-11.8/include"
 				}
 			],
 			"language" : "CXX",

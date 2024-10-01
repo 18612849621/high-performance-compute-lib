@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CUDA
   "/root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/matmul.cu" "/root/Desktop/我的网盘/high-performance-compute-lib/build/src/CMakeFiles/kernels.dir/kernels/matmul.cu.o"
   "/root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/print.cu" "/root/Desktop/我的网盘/high-performance-compute-lib/build/src/CMakeFiles/kernels.dir/kernels/print.cu.o"
+  "/root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/transpose.cu" "/root/Desktop/我的网盘/high-performance-compute-lib/build/src/CMakeFiles/kernels.dir/kernels/transpose.cu.o"
   )
 set(CMAKE_CUDA_COMPILER_ID "NVIDIA")
 

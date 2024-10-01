@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/Desktop/我的网盘/high-performance-compute-lib/tests/kernels/test.cc" "/root/Desktop/我的网盘/high-performance-compute-lib/build/tests/CMakeFiles/test.dir/kernels/test.cc.o"
+  "/root/Desktop/我的网盘/high-performance-compute-lib/src/utils/cuda_utils.cc" "/root/Desktop/我的网盘/high-performance-compute-lib/build/src/CMakeFiles/cuda_utils.dir/utils/cuda_utils.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,7 +17,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/root/Desktop/我的网盘/high-performance-compute-lib/build/src/CMakeFiles/kernels.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -179,6 +179,33 @@ kernels/print.cu.s:
 	cd /root/Desktop/我的网盘/high-performance-compute-lib/build && $(MAKE) -f src/CMakeFiles/kernels.dir/build.make src/CMakeFiles/kernels.dir/kernels/print.cu.s
 .PHONY : kernels/print.cu.s
 
+kernels/transpose.o: kernels/transpose.cu.o
+
+.PHONY : kernels/transpose.o
+
+# target to build an object file
+kernels/transpose.cu.o:
+	cd /root/Desktop/我的网盘/high-performance-compute-lib/build && $(MAKE) -f src/CMakeFiles/kernels.dir/build.make src/CMakeFiles/kernels.dir/kernels/transpose.cu.o
+.PHONY : kernels/transpose.cu.o
+
+kernels/transpose.i: kernels/transpose.cu.i
+
+.PHONY : kernels/transpose.i
+
+# target to preprocess a source file
+kernels/transpose.cu.i:
+	cd /root/Desktop/我的网盘/high-performance-compute-lib/build && $(MAKE) -f src/CMakeFiles/kernels.dir/build.make src/CMakeFiles/kernels.dir/kernels/transpose.cu.i
+.PHONY : kernels/transpose.cu.i
+
+kernels/transpose.s: kernels/transpose.cu.s
+
+.PHONY : kernels/transpose.s
+
+# target to generate assembly for a file
+kernels/transpose.cu.s:
+	cd /root/Desktop/我的网盘/high-performance-compute-lib/build && $(MAKE) -f src/CMakeFiles/kernels.dir/build.make src/CMakeFiles/kernels.dir/kernels/transpose.cu.s
+.PHONY : kernels/transpose.cu.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -194,6 +221,9 @@ help:
 	@echo "... kernels/print.o"
 	@echo "... kernels/print.i"
 	@echo "... kernels/print.s"
+	@echo "... kernels/transpose.o"
+	@echo "... kernels/transpose.i"
+	@echo "... kernels/transpose.s"
 .PHONY : help
 
 

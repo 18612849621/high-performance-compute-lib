@@ -9,4 +9,5 @@ set(CMAKE_CUDA_STANDARD_REQUIRED ON)
 include_directories(${INCLUDE_DIR})
 
 # print
-add_library(kernels STATIC kernels/print.cu kernels/matmul.cu)
+add_library(kernels STATIC kernels/print.cu kernels/matmul.cu
+                           kernels/transpose.cu)

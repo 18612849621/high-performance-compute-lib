@@ -92,14 +92,14 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "kernels::@145eef247bfb46b6828c",
-					"jsonFile" : "target-kernels-Debug-03ba056791ca716cab32.json",
+					"jsonFile" : "target-kernels-Debug-20ef89b843761c4dd0cc.json",
 					"name" : "kernels",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "test::@a44f0ac069e85531cdee",
-					"jsonFile" : "target-test-Debug-a9b3e6571e7eeeb27046.json",
+					"jsonFile" : "target-test-Debug-e7d04241f06cff8c285e.json",
 					"name" : "test",
 					"projectIndex" : 2
 				}

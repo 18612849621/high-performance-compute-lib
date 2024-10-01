@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/root/Desktop/我的网盘/high-performance-compute-lib/build/src",
+  "command": "/usr/local/cuda/bin/nvcc   -I/root/Desktop/我的网盘/high-performance-compute-lib/include -I/root/Desktop/我的网盘/high-performance-compute-lib/src  -g   -std=c++11 -x cu -c /root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/print.cu -o CMakeFiles/kernels.dir/kernels/print.cu.o",
+  "file": "/root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/print.cu"
+},
+{
+  "directory": "/root/Desktop/我的网盘/high-performance-compute-lib/build/src",
+  "command": "/usr/local/cuda/bin/nvcc   -I/root/Desktop/我的网盘/high-performance-compute-lib/include -I/root/Desktop/我的网盘/high-performance-compute-lib/src  -g   -std=c++11 -x cu -c /root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/matmul.cu -o CMakeFiles/kernels.dir/kernels/matmul.cu.o",
+  "file": "/root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/matmul.cu"
+},
+{
+  "directory": "/root/Desktop/我的网盘/high-performance-compute-lib/build/src",
+  "command": "/usr/local/cuda/bin/nvcc   -I/root/Desktop/我的网盘/high-performance-compute-lib/include -I/root/Desktop/我的网盘/high-performance-compute-lib/src  -g   -std=c++11 -x cu -c /root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/transpose.cu -o CMakeFiles/kernels.dir/kernels/transpose.cu.o",
+  "file": "/root/Desktop/我的网盘/high-performance-compute-lib/src/kernels/transpose.cu"
+},
+{
+  "directory": "/root/Desktop/我的网盘/high-performance-compute-lib/build/tests",
+  "command": "/usr/bin/g++   -I/root/Desktop/我的网盘/high-performance-compute-lib/include -I/root/Desktop/我的网盘/high-performance-compute-lib/src -I/usr/local/cuda-11.8/include  -g   -std=gnu++17 -o CMakeFiles/test.dir/kernels/test.cc.o -c /root/Desktop/我的网盘/high-performance-compute-lib/tests/kernels/test.cc",
+  "file": "/root/Desktop/我的网盘/high-performance-compute-lib/tests/kernels/test.cc"
+}
+]
