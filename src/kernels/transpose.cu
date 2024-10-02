@@ -89,7 +89,9 @@ __global__ void TransposeV2(int *odata, int *idata) {
     // 每个bank可以同时被一个线程访问。因此，多个线程可以并行访问不同的银行，
     // 但如果多个线程同时访问同一个银行，就会发生bank
     // 冲突，导致访问延迟
-    // link: https://blog.csdn.net/acs713/article/details/138732452
+    // link: https://blog.csdn.net/dataowner/article/details/123537966
+    // 这里说白了不是对应的访问 32一组 就无法 1 clock 的性能模式完成处理
+    // 所以一定注意行访问的方式才可以高并发，同时列访问没用
     shared_memory[threadIdx.y + i][threadIdx.x] = idata[(r + i) * w + c];
   }
   // 同步操作符号保证数据是最新需要的
