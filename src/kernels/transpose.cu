@@ -7,10 +7,19 @@
 #define MX 1024
 #define MY 1024
 
-inline void printDim3(const dim3 &d) {
+// TODO(panyuchen):
+// 我认为他的block跨线程调用有优化空间因为他是按照列进行访问对于每个线程来说访存消耗更大
+inline void PrintDim3(const dim3 &d) {
   std::cout << "dim3: (" << d.x << ", " << d.y << ", " << d.z << ")"
             << std::endl;
 }
+
+inline void PrintComputeInfo(const float &ms) {
+  printf("%25s%25s\n", "Routine", "Bandwidth(GB/s)");
+  printf("%25s", "native transpose");
+  printf("%20.2f\n", 2 * MX * MY * sizeof(int) * 1e-6 * 100 / ms);
+}
+
 inline void PrintMatrix(int *matrix, const std::string &name) {
   printf("\n%s:\n", name.c_str());
   for (int r = 0; r < MY; ++r) {
@@ -66,6 +75,34 @@ __global__ void Transpose(int *odata, int *idata) {
   }
 }
 
+__global__ void TransposeV2(int *odata, int *idata) {
+  // 通过使用共享内存提升kernel的带宽能力.
+  // + 1 解决存储块冲突
+  __shared__ float shared_memory[TILE_DIM][TILE_DIM + 1];
+  int c = blockIdx.x * TILE_DIM + threadIdx.x;
+  int r = blockIdx.y * TILE_DIM + threadIdx.y;
+  if (c >= MX || r >= MY) {
+    return;
+  }
+  int w = gridDim.x * TILE_DIM;
+  for (int i = 0; i < TILE_DIM; i += BLOCK_SIZE) {
+    // 每个bank可以同时被一个线程访问。因此，多个线程可以并行访问不同的银行，
+    // 但如果多个线程同时访问同一个银行，就会发生bank
+    // 冲突，导致访问延迟
+    // link: https://blog.csdn.net/acs713/article/details/138732452
+    shared_memory[threadIdx.y + i][threadIdx.x] = idata[(r + i) * w + c];
+  }
+  // 同步操作符号保证数据是最新需要的
+  __syncthreads();
+  // 这里仅仅是行列交换，所使用的shard mem的行列是没有变的
+  c = blockIdx.y * TILE_DIM + threadIdx.x;
+  r = blockIdx.x * TILE_DIM + threadIdx.y;
+  for (int i = 0; i < TILE_DIM; i += BLOCK_SIZE) {
+    // NOTE(panyuchen) : 在shared mem中完成了转置操作，可以大幅度增加kernels吞吐
+    odata[(r + i) * w + c] = shared_memory[threadIdx.x][threadIdx.y + i];
+  }
+}
+
 bool CheckTranspose(int *dst, int *src) {
   // PrintMatrixT(dst, "dst");
   // PrintMatrix(src, "src");
@@ -99,7 +136,6 @@ void TransposeTest() {
 
   // PrintMatrix(h_idata, "src_data");
   // PrintMatrixT(check_data, "src_data.T");
-
   cudaMemcpy(d_idata, h_idata, data_size, cudaMemcpyHostToDevice);
   // Kernel的最小处理单元定义为 TILE_DIM x TILE_DIM (逻辑层定义).
   // 真正对于kernel的处理是使用 TILE_DIM x BLOCK_SIZE 个 threads
@@ -108,9 +144,20 @@ void TransposeTest() {
   dim3 threads(TILE_DIM, BLOCK_SIZE, 1);
   dim3 blocks((MX + TILE_DIM - 1) / TILE_DIM, (MY + TILE_DIM - 1) / TILE_DIM,
               1);
-  // printDim3(threads);
-  // printDim3(blocks);
-  Transpose<<<blocks, threads>>>(d_odata, d_idata);
+  // PrintDim3(threads);
+  // PrintDim3(blocks);
+
+  cudaEvent_t startEvent, stopEvent;
+  cudaEventCreate(&startEvent);
+  cudaEventCreate(&stopEvent);
+  cudaEventRecord(startEvent, 0);
+  TransposeV2<<<blocks, threads>>>(d_odata, d_idata);
+  // Transpose<<<blocks, threads>>>(d_odata, d_idata);
+  cudaEventRecord(stopEvent, 0);
+  cudaEventSynchronize(stopEvent);
+  float ms;
+  cudaEventElapsedTime(&ms, startEvent, stopEvent);
+  PrintComputeInfo(ms);
 
   cudaMemcpy(h_odata, d_odata, data_size, cudaMemcpyDeviceToHost);
   cudaDeviceSynchronize();
@@ -120,4 +167,6 @@ void TransposeTest() {
   free(h_odata);
   cudaFree(d_idata);
   cudaFree(d_odata);
+  cudaEventDestroy(startEvent);
+  cudaEventDestroy(stopEvent);
 }

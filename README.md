@@ -11,4 +11,7 @@ sudo apt install clangd
 # git config --list
 git config --local user.name "18612849621"
 git config --local user.email "1354368242@qq.com"
+# nsys profile
+/usr/local/cuda-11.8/bin/nv-nsight-cu-cli
+nsys profile --stats=true 
 ```

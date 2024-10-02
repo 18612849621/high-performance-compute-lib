@@ -47,7 +47,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "",
 			"projects" : 
 			[
 				{
@@ -92,14 +92,14 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "kernels::@145eef247bfb46b6828c",
-					"jsonFile" : "target-kernels-Debug-20ef89b843761c4dd0cc.json",
+					"jsonFile" : "target-kernels-f82505b6fdec6cc030c1.json",
 					"name" : "kernels",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "test::@a44f0ac069e85531cdee",
-					"jsonFile" : "target-test-Debug-e7d04241f06cff8c285e.json",
+					"jsonFile" : "target-test-ce458bbef1fed89910d6.json",
 					"name" : "test",
 					"projectIndex" : 2
 				}
