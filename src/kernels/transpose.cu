@@ -7,8 +7,6 @@
 #define MX 1024
 #define MY 1024
 
-// TODO(panyuchen):
-// 我认为他的block跨线程调用有优化空间因为他是按照列进行访问对于每个线程来说访存消耗更大
 inline void PrintDim3(const dim3 &d) {
   std::cout << "dim3: (" << d.x << ", " << d.y << ", " << d.z << ")"
             << std::endl;
